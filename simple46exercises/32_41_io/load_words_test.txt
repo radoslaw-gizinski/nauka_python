@@ -1,0 +1,3 @@
+
+"stressed desserts". Note, by the way, that each pair by itself forms a
+palindrome!
