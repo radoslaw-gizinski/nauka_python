@@ -1,0 +1,54 @@
+Background
+Do systemu klienta ładujemy codziennie pewien staly zestaw plikow. Pliki przychodza spakowane w archiwum zip. Wszystkie
+zaladowane pliki zip przechowujemy w archiwalnym folderze.
+Do tej pory zostalo zaladowanych ponad 440 plikow (1,5 roku dzialania systemu).
+Pliki z danymi sa to pliki tekstowe o stalej szerokosci, to znaczy ze w konkretnym pliku wszystkie linie maja dokladnie
+taka sama ilosc znakow. dlugosc lini w roznych plikach moze byc rozna. To zale
+
+Problem
+Okazalo sie, ze integracja jednego z plikow nie uwzgledniala jednego pola. Trzeba przeladowac jeden konkretny plik ze
+wszystkich otrzymanych do tej pory zestawow.
+
+Problem pierwszy:
+zaladowanie jednego zestawu trwa od 1 do 4 godzin (w zaleznosci od ilosci danych oraz obciazenia systemu). Dodatkowo
+zaladowanie wczesniejszego zestawu WYMUSZA zaladowanie wszystkich nastepujacych po nim zestawow. chcemy tego uniknac.
+
+problem drugi
+reczne rozpakowanie ponad 400 zipow w odpowiedniej kolejnosci i wyciagniecie z nich jednego konkretnego pliku zajmie
+bardzo duzo czasu oraz jest bardzo podatne na pomylke (zla kolejnosc, ominiecie pliku; podwojne rozpakowanie tego samego
+pliku nie jest problemem).
+
+Challenge
+Wyciagniecie jednego konkretnego pliku w kolejnosci chronologicznej ze wszystkich archiwow i polaczenie do jednego
+pliku, ktory pozniej bedzie recznie zaladowany do systemu i zintegrowany z danymi.
+
+Jak to chcialbys zrobic?
+
+w zwiazku z tym ze nie masz zadnego doswiadczenia w tym co jest dostepne to powim jakie beda potrzebne narzedzia
+(polecenia, programy). Aha. wszystko dzieje sie na Linuxie.
+
+- wylistowanie plikow w kolejnosci chronologicznej (rosnocej malejacej)
+- rozpakowanie konkretnego pliku z archiwum zip
+- polaczenie kilku plikow w jeden
+
+problem trzeci z gwiazdka
+w miedzy czasie zmienil sie format plikow. od konkretnej daty wiersze sa dluzsze o kilkanascie, kilkadziesiat znakow.
+Trzeba sprawdzic w ktorym konkretnym momencie zastapila zmiana i przygotowac dwa pliki: przez zmiana i po zmianie.
+
+Hint do rozwiazania gwiazdki
+Nazwa pliku wyglada jak BISR_EXPORT_20170323105906_France.zip. Liczba w nazwie to data z godzina i sekundami
+wygenerowania pliku.
+
+- przyda sie jakis sposob na wyciagniecie daty z pliku. sluza do tego funkcjie ktore nazywaja sie substr, substring, mid
+ lub podobnie w zaleznosci od jezyka czy narzedzia.
+
+- narzedzie do sprawdzenia dlugosci lini w pliku albo ilosci znakow w lini
+
+Masz na rozwiazanie miesiac. Na poczatku nie skupiaj sie na poleceniach czy narzedziach tylko na samym sposobie jak to
+rozwiazac. opisz go przy pomocy prostej listy z punktami, w formie prostego algorytmu. Kiedy bedzie mial rece i nogi to
+bedziesz mogl sie zajac przetlumaczeniem ludzkiego na linuxowy.
+
+sugeruje python-a lub bash-a i wbudowane narzedzia linuxowe lub . mozesz jednak wpasc na inne narzedzie. ja mialem
+ograniczenia (linux, bash, python 2.6). Ty mozesz to zrobic wlasciwie w czymkolwiek. nawet na windowscie. dzisiaj
+przygotuje ci zestaw testowy plikow do zabawy tylko mi potwierdz ze chcesz sie tym zajac. nie chce przygotowywac tych
+danych na darmo ;)
