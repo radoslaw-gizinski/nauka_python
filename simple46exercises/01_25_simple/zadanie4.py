@@ -1,18 +1,8 @@
 def is_vowel(c):
-    '''
-    To jest dokumentacja funkcji
-    Zwraca True jezeli c jest samogloska (a, e, i, o, u, y). W przeciwnym
-    wypadku zwraca False
-    '''
-    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
-    if c.lower() in vowels:
-        return True
-    else:
-        return False
-
+    pass
 
 def is_consonant(c):
-    return not is_vowel(c) and c.isalpha()
+    pass
 
 
 if __name__ == '__main__':

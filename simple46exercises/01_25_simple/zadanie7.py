@@ -3,10 +3,7 @@
 
 
 def reverse(text):
-    odwrotna_lista = []
-    for c in text:
-        odwrotna_lista.insert(0, c)
-    return ''.join(odwrotna_lista)
+    pass
 
 
 if __name__ == '__main__':

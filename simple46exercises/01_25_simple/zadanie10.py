@@ -8,28 +8,9 @@
 from simple46exercises.simple.zadanie9 import is_member
 
 
-def overlapping1(list1, list2):
-    for e in list1:
-        if e in list2:
-            return True
-    return False
+def overlapping(list1, list2):
+    raise NotImplemented
 
-
-def overlapping2(list1, list2):
-    for e in list1:
-        if is_member(e, list2):
-            return True
-    return False
-
-
-def overlapping3(list1, list2):
-    for a in list1:
-        for b in list2:
-            if a == b:
-                return True
-    return False
-
-overlapping = overlapping3
 
 
 def test(data, result, message):

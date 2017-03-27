@@ -1,4 +1,4 @@
-from simple46exercises.simple.zadanie7 import reverse
+# hint: wykorzystaj to co juz napisales w poprzednich zadaniach. nie kopiuj kodu. wykorzystaj istniejacy
 
 # Define a function is_palindrome() that recognizes palindromes
 # (i.e. words that look the same written backwards). For example,

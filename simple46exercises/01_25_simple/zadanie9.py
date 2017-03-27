@@ -6,10 +6,7 @@
 
 
 def is_member(value, value_list):
-    for e in value_list:
-        if value == e:
-            return True
-    return False
+    raise NotImplemented
 
 
 if __name__ == '__main__':
